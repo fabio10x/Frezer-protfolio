@@ -44,11 +44,11 @@ const projects = [
   },
   {
     id: "6",
-    path: "/aura-car",
-    title: "Quote Generator",
-    description: "Infinite inspiration engine fetching data from external REST APIs.",
-    category: "Data App",
-    tech: ["API Fetch", "Async/Await", "JSON"],
+    path: "/aura-cars",
+    title: "Aura Cars",
+    description: "A high-end automotive showcase featuring premium design and smooth scroll interactions.",
+    category: "Showcase",
+    tech: ["React", "Tailwind", "Design"],
   },
 ];
 
@@ -70,10 +70,10 @@ function Launchbox() {
             Premium Developer Gallery
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6">
-            The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Lab.</span>
+            Fabio's <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Lab.</span>
           </h1>
           <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Exploring the boundaries of React through experimental architecture and high-performance UI patterns.
+            A curated showcase of high-performance React components, experimental UI patterns, and modern frontend architecture.
           </p>
         </header>
 
