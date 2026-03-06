@@ -4,8 +4,8 @@ function AuraCars() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-50 font-sans">
       {/* Top nav */}
-      <header className="border-b border-slate-900/60 bg-slate-950/80 backdrop-blur">
-        <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+      <header className="border-b border-slate-900/60 bg-slate-950/80 backdrop-blur sticky top-0 z-40">
+        <div className="max-w-6xl mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
           <div className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 flex items-center justify-center text-xs font-extrabold tracking-widest">
               AC
@@ -27,7 +27,7 @@ function AuraCars() {
       </header>
 
       {/* Hero */}
-      <main className="px-6 py-12 md:py-20">
+      <main className="px-4 sm:px-6 py-12 md:py-20">
         <div className="max-w-6xl mx-auto grid gap-12 lg:grid-cols-2 items-center">
           {/* Left: text */}
           <section className="space-y-6">
