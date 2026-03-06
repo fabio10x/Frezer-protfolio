@@ -9,6 +9,8 @@ import QuoteGenerator from "./pages/QuoteGenerator";
 import ExpenseTracker from "./pages/ExpenseTracker";
 import TheMoodJournal from "./pages/TheMoodJournal";
 import CounterPro from "./pages/CounterPro";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 
 
@@ -29,6 +31,8 @@ function App() {
           <Route path="/aura-cars" element={<AuraCars />} />
           <Route path="/mood-journal" element={<TheMoodJournal />} />
           <Route path="/counter" element={<CounterPro />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </>
