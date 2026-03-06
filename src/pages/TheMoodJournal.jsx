@@ -53,10 +53,10 @@ function TheMoodJournal() {
 
     return (
         <>
-            <div className="flex flex-col items-center justify-center mt-20 px-4">
-                <div className="w-full max-w-xl bg-white shadow-lg rounded-2xl p-6 space-y-4 md:space-y-6">
+            <div className="flex flex-col items-center justify-center mt-10 sm:mt-20 px-4">
+                <div className="w-full max-w-xl bg-white shadow-lg rounded-2xl p-5 sm:p-6 space-y-4 md:space-y-6">
                     <div className="space-y-1 text-center">
-                        <h1 className="text-2xl font-bold text-gray-800">The Mood Journal</h1>
+                        <h1 className="text-xl sm:text-2xl font-bold text-gray-800">The Mood Journal</h1>
                         <p className="text-sm text-gray-500">
                             Capture how you feel, one entry at a time.
                         </p>
@@ -85,11 +85,10 @@ function TheMoodJournal() {
                                         key={option.id}
                                         type="button"
                                         onClick={() => handleColorChange(option.className)}
-                                        className={`w-9 h-9 rounded-full border-2 transition-all ${option.className} ${
-                                            selectedColor === option.className
+                                        className={`w-9 h-9 rounded-full border-2 transition-all ${option.className} ${selectedColor === option.className
                                                 ? 'ring-2 ring-offset-2 ring-blue-400 border-transparent'
                                                 : 'border-white/70 hover:ring-2 hover:ring-offset-2 hover:ring-gray-200'
-                                        }`}
+                                            }`}
                                         aria-label={option.label}
                                     />
                                 ))}

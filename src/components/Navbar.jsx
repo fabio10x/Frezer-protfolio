@@ -1,6 +1,8 @@
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
     const navLinks = [
         { path: "/", label: "Lab" },
         { path: "/todo", label: "To-Do" },
@@ -23,7 +25,8 @@ function Navbar() {
                 </h1>
             </Link>
 
-            <div className="flex gap-8 items-center">
+            {/* Desktop Menu */}
+            <div className="hidden md:flex gap-8 items-center">
                 {navLinks.map((link) => (
                     <NavLink
                         key={link.path}
@@ -35,6 +38,47 @@ function Navbar() {
                         {link.label}
                     </NavLink>
                 ))}
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="md:hidden p-2 text-slate-400 hover:text-white transition-colors"
+                aria-label="Toggle menu"
+            >
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    {isOpen ? (
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    ) : (
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    )}
+                </svg>
+            </button>
+
+            {/* Mobile Menu Overlay */}
+            <div className={`fixed inset-0 bg-slate-950/95 backdrop-blur-xl z-50 md:hidden transition-all duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                <div className="flex flex-col items-center justify-center h-full gap-8">
+                    <button
+                        onClick={() => setIsOpen(false)}
+                        className="absolute top-6 right-8 text-slate-400 hover:text-white"
+                    >
+                        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    {navLinks.map((link) => (
+                        <NavLink
+                            key={link.path}
+                            to={link.path}
+                            onClick={() => setIsOpen(false)}
+                            className={({ isActive }) =>
+                                `text-2xl font-black tracking-tighter uppercase transition-all duration-300 ${isActive ? 'text-amber-500' : 'text-white'}`
+                            }
+                        >
+                            {link.label}
+                        </NavLink>
+                    ))}
+                </div>
             </div>
         </nav>
     );

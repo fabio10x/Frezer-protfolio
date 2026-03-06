@@ -25,8 +25,8 @@ function ToDoList() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex justify-center items-start pt-10 px-4">
-      <div className="max-w-md w-full bg-white shadow-2xl rounded-3xl p-8 border border-gray-100">
+    <div className="min-h-screen bg-slate-50 flex justify-center items-start pt-6 sm:pt-10 px-4">
+      <div className="max-w-md w-full bg-white shadow-2xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-gray-100">
         <Link
           to="/"
           className="mb-6 inline-block text-sm font-bold text-blue-500 hover:text-blue-600 transition-colors"
@@ -34,7 +34,7 @@ function ToDoList() {
           ← Back to Launchbox
         </Link>
 
-        <h1 className="text-3xl font-black text-slate-900 mb-2">Priority Tasks</h1>
+        <h1 className="text-2xl sm:text-3xl font-black text-slate-900 mb-2">Priority Tasks</h1>
         <p className="text-slate-500 text-sm mb-8">Stay organized and focused on your goals.</p>
 
         <div className="flex gap-2 mb-8">
@@ -59,8 +59,8 @@ function ToDoList() {
             <li
               key={task.id}
               className={`flex items-center justify-between p-4 rounded-2xl border transition-all ${task.completed
-                  ? "bg-gray-50 border-gray-100 opacity-60"
-                  : "bg-white border-gray-100 hover:border-blue-200 shadow-sm"
+                ? "bg-gray-50 border-gray-100 opacity-60"
+                : "bg-white border-gray-100 hover:border-blue-200 shadow-sm"
                 }`}
             >
               <div className="flex items-center gap-3">

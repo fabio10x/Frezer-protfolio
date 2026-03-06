@@ -32,15 +32,15 @@ function ExpenseTracker() {
 
 
     return (
-        <div className="min-h-screen bg-slate-50 flex justify-center items-start pt-10">
-            <div className="max-w-md w-full mx-auto p-6 bg-white shadow-2xl rounded-2xl border border-gray-100 font-sans text-gray-800">
+        <div className="min-h-screen bg-slate-50 flex justify-center items-start pt-6 sm:pt-10 px-4">
+            <div className="max-w-md w-full mx-auto p-5 sm:p-6 bg-white shadow-2xl rounded-2xl border border-gray-100 font-sans text-gray-800">
                 <Link
                     to="/"
                     className="mb-6 inline-block text-sm font-bold text-blue-500 hover:text-blue-600"
                 >
                     ← Back to Launchbox
                 </Link>
-                <h1 className="text-3xl font-black text-center mb-8 text-blue-600 teacking-tight">My Expense</h1>
+                <h1 className="text-2xl sm:text-3xl font-black text-center mb-6 sm:mb-8 text-blue-600 teacking-tight">My Expense</h1>
                 <div className="flex flex-col gap-3 mb-4">
                     <input
                         type="text" placeholder="Enter Expense"
