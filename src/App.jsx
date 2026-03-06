@@ -1,13 +1,15 @@
 
 import { Routes, Route, useLocation } from "react-router-dom";
-import AuraCars from "./AuraCars";
-import Launchbox from "./Launchbox";
-import ToDoList from "./ToDoList";
-import DigitalClock from "./DigitalClock";
-import ColorPicker from "./ColorPicker";
-import QuoteGenerator from "./QuoteGenerator";
-import ExpenseTracker from "./ExpenseTracker";
-import Navbar from "./Navbar";
+import AuraCars from "./pages/AuraCars";
+import Launchbox from "./pages/Launchbox";
+import ToDoList from "./pages/ToDoList";
+import DigitalClock from "./pages/DigitalClock";
+import ColorPicker from "./pages/ColorPicker";
+import QuoteGenerator from "./pages/QuoteGenerator";
+import ExpenseTracker from "./pages/ExpenseTracker";
+import TheMoodJournal from "./pages/TheMoodJournal";
+import CounterPro from "./pages/CounterPro";
+import Navbar from "./components/Navbar";
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
           <Route path="/quote-generator" element={<QuoteGenerator />} />
           <Route path="/expense-tracker" element={<ExpenseTracker />} />
           <Route path="/aura-cars" element={<AuraCars />} />
+          <Route path="/mood-journal" element={<TheMoodJournal />} />
+          <Route path="/counter" element={<CounterPro />} />
         </Routes>
       </div>
     </>
